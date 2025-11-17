@@ -1,27 +1,29 @@
-import { useState } from 'react'
+import Layout from './components/Layout'
+import Hero from './components/Hero'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <Layout>
+      <Hero />
+      <section id="explore" className="relative z-10 bg-[#0D2440] text-[#E7F0FA]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-[#E7F0FA]">A private showroom</h3>
+              <p className="text-[#7BA4D0]">A selection that whispers luxury — minimal, intentional, and rare.</p>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-[#E7F0FA]">Only what matters</h3>
+              <p className="text-[#7BA4D0]">Every piece is chosen for feeling first. The details follow.</p>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-[#E7F0FA]">New drops, limited runs</h3>
+              <p className="text-[#7BA4D0]">Releases arrive quietly. Those who know, know.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </Layout>
   )
 }
 
